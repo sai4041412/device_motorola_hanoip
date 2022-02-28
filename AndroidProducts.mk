@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_hanoip.mk
+    $(LOCAL_DIR)/corvus_hanoip.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_hanoip-eng \
-    arrow_hanoip-user \
-    arrow_hanoip-userdebug
+    corvus_hanoip-eng \
+    corvus_hanoip-user \
+    corvus_hanoip-userdebug
