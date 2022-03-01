@@ -95,6 +95,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Telephony & IMS  
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml
+
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
