@@ -27,7 +27,15 @@ $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 -include $(LOCAL_PATH)/properties.mk
 
 # A/B
-AB_OTA_PARTITIONS += vendor_boot
+AB_OTA_PARTITIONS += \
+    vendor_boot \
+    vendor
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=ext4 \
+    POSTINSTALL_OPTIONAL_vendor=true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

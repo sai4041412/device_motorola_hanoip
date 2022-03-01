@@ -17,6 +17,7 @@
 -include device/motorola/sm6150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/hanoip
+HANOIP_PREBUILT := device/motorola/hanoip-prebuilt
 
 # Board Info
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -36,6 +37,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 # Partitions
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
+BOARD_PREBUILT_VENDORIMAGE := $(HANOIP_PREBUILT)/vendor.img
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
